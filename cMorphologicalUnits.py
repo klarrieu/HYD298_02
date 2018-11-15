@@ -32,7 +32,7 @@ class MU:
         # u_raster: STR full path to velocity raster
 
         if not str(self.license_state) == "CheckedOut":
-            arcpy.CheckOutExtension('Spatial')
+            self.license_state = arcpy.CheckOutExtension('Spatial')
 
         __ras__ = []  # list of calculated rasters
         try:
