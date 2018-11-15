@@ -13,7 +13,7 @@ def main(raster_dir, *mu_sublist):
     discharge_workbook.close_wb()
 
     mu_processor = cmu.MU()
-    rasters = dict(zip(glob.glob(raster_dir + "h**.aux.xml"), glob.glob(raster_dir + "u**.aux.xml")))
+    rasters = dict(zip(glob.glob(raster_dir + 'input\\' + "h**.aux.xml"), glob.glob(raster_dir + 'input\\' + "u**.aux.xml")))
 
     for h_ras in rasters.keys():
         q = int(discharges[h_ras.split("\\")[-1].split(".aux")[0]])  # get discharge
