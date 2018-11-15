@@ -47,8 +47,8 @@ class MU:
         for mu in self.mu_names:
             try:
                 self.logger.info("   - type: " + mu + " ...")
-                __ras__.append(Con((Float(h_ras) < (self.thresh_h_upper[mu])) & (Float(u_ras) < (self.thresh_u_upper[mu])),
-                       Con((Float(h_ras) >= (self.thresh_h_lower[mu])) & (Float(u_ras) >= (self.thresh_u_lower[mu])),
+                __ras__.append(Con((Float(h_ras) < (self.thresh_h_upper[mu])/self.unit_conv) & (Float(u_ras) < (self.thresh_u_upper[mu])/self.unit_conv),
+                       Con((Float(h_ras) >= (self.thresh_h_lower[mu])/self.unit_conv) & (Float(u_ras) >= (self.thresh_u_lower[mu])/self.unit_conv),
                            int(self.mu_names_number[mu]))))
                     
             except:
