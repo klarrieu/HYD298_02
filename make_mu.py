@@ -33,7 +33,6 @@ def main(raster_dir, *mu_sublist):
         except:
             mu_processor.mu_maker(h_raster, u_raster, out_ras_name, out_shp_name)
 
-        mu_processor.reload_mu_workbook(1)  # load the 'results' worksheet from mu.xlsx...
         mu_processor.write_area2wb(out_shp_name, q)
 
     mu_processor.release_mu_workbook()  # save area results in workbook and closes workbook

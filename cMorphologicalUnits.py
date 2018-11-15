@@ -83,6 +83,7 @@ class MU:
         for mu in self.mu_names:
             self.mu_names_number.update({mu: count})
             count += 1
+        self.reload_mu_workbook(1)
         self.logger.info("   * OK")
 
     def mu_maker(self, h_raster, u_raster, full_out_ras_name, full_out_shp_name, *mu):
